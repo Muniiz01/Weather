@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Clima</title>
+    <script type="importmap"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Clima.styles.css" asp-append-version="true" />
+</head>
+<body class="d-flex flex-column vh-100">
+    <header class="d-flex align-items-center mt-4">
+        <a href="https://www.weatherapi.com/" class="p-2 ms-5 pe-auto">
+            <img src="img/weatherapi_logo.png" class="img-fluid" alt="">
+        </a>
+
+        <div class="d-flex gap-3 ms-auto me-5">
+            <a href="https://github.com/Muniiz01" class="p-2">
+                <img src="img/github.png" class="img-fluid" alt="">
+            </a>
+            <a href="https://www.linkedin.com/in/munizz/" class="p-2">
+                <img src="img/linkedin.png" class="img-fluid" alt="">
+            </a>
+            <a href="https://www.instagram.com/victor_munizz_/" class="p-2">
+                <img src="img/instagram.png" class="img-fluid" alt="">
+            </a>
+        </div>
+    </header>
+   
+    @RenderBody()
+
+
+    <footer class=" text-center p-1">
+        <p>
+            Hello world, I'm Victor, a web developer. This website is built on top of the Weather API, which retrieves
+            real-time weather data based on the user's location. The site functions as a front-end interface to display
+            the API’s responses in a user-friendly format.
+        </p>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

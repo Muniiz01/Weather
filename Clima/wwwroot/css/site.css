@@ -1,0 +1,33 @@
+body {
+}
+
+#container-m {
+    background-image: url(font/img_Temp_condition/ChatGPT\ Image\ 9\ de\ abr.\ de\ 2025\,\ 17_45_58.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#temp_num_p {
+    font-size: 70px;
+}
+
+.list-gp .list-group-item {
+    font-size: smaller;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    padding: 8px 0;
+    background-color: transparent;
+}
+
+@media (max-width: 600px) {
+    .list-gp {
+        display: none;
+    }
+}
+
+@media (max-width: 570px) {
+    .cont-gp {
+        min-width: 400px;
+    }
+}

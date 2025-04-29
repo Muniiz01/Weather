@@ -1,0 +1,58 @@
+﻿@page
+@model Clima.Pages.IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<main class="d-flex flex-column justify-content-center align-items-center flex-fill">
+    <form method="get" class="input-group position-relative m-3 w-25 " style="min-width: 300px;">
+        <input id="search-inpt" type="text" name="city" class="form-control" placeholder="Search city"
+               style="box-shadow: none;">
+        <button id="search-btn" class="btn btn-outline-secondary" type="submit">Search</button>
+    </form>
+
+    <div class="d-flex flex-column w-50 p-3 bg-light border rounded shadow cont-gp" style="min-width: 500px; min-height: 300px;">
+        <!-- #adaptative html -->
+        @if (Model.Weather != null)
+        {
+        <div class="d-flex">
+            <p id="city-p" class="fs-4"><i class="fa-solid fa-house fs-5 me-3"></i>@Model.Weather.City</p>
+        </div>
+        <div class="d-flex align-items-center ">
+            <img src="@Model.Weather.Icon" class="h-50 pe-auto" style="min-width: 100px; min-height: 35%;" alt="">
+            <div class="d-flex flex-column ms-5">
+                <p id="temp_num_p" class="" style="min-width: 100px; min-height: 40px;">@Model.Weather.Temperature<sup class="fs-1">°C</sup></p>
+            </div>
+
+
+            <ul class="list-group list-group-flush ms-auto list-gp">
+                <li class="list-group-item text-nowrap">
+                        UV: @Model.Weather.uv
+                </li>
+                <li class="list-group-item text-nowrap">
+                        Wind Speed: @Model.Weather.WindKph km/h
+                </li>
+                <li class="list-group-item text-nowrap">
+                        Humidity: @Model.Weather.Humidity %
+                </li>
+                <li class="list-group-item text-nowrap">
+                        Pressure: @Model.Weather.PressureMb mb
+                </li>
+                <li class="list-group-item text-nowrap">
+                        Thermal sensation: @Model.Weather.Thermal °C
+                </li>
+                <li class="list-group-item text-nowrap">
+                        Visibility: @Model.Weather.Visibility km
+                </li>
+            </ul>
+        </div>
+        <div class="d-flex">
+            <p class="">@Model.Weather.Description</p>
+        </div>
+        }
+    </div>
+</main>
+
+
+    
+
