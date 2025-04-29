@@ -62,5 +62,7 @@ Ao executar uma guia no navegador sera aberta
 
 ## Exemplo de Uso
 
-Ao acessar a aplicação, você verá as informações climáticas da cidade padrão (Londres). Para consultar outra cidade, adicione o parâmetro `city` na Barra de pesquisa.
-   
+Ao acessar a aplicação, você verá as informações climáticas da cidade padrão (Londres). Para consultar outra cidade, adicione um parâmetro na Barra de pesquisa, como no exemplo abaixo:
+
+![Gif](https://github.com/user-attachments/assets/b3680c35-cd95-4777-a1f4-31e76391fb04)
+
