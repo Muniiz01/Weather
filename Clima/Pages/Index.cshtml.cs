@@ -22,7 +22,7 @@ namespace Clima.Pages
                 Weather = null;
                 return;
             }
-            string apikey = "d4f32718db3c430f8bd235448252704";
+            string apikey = "YOUR-API-KEY-HERE";
             string url = $"http://api.weatherapi.com/v1/current.json?key={apikey}&q={city}&aqi=no";
 
             var response = await _httpClient.GetAsync(url);
